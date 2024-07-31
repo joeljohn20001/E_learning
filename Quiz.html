@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <style>
+        /* Global styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Styling for the main container */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling for header */
+        h1, h2, h3 {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for section header */
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        /* Styling for quiz details */
+        .quiz-meta {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Styling for individual quiz meta items */
+        .quiz-meta div {
+            flex: 1 1 45%;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for questions */
+        .questions {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for options */
+        .options {
+            margin-bottom: 15px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Styling for individual options */
+        .options li {
+            margin-bottom: 10px;
+        }
+
+        /* Styling for feedback and review */
+        .feedback, .review {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for button */
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect for button */
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        /* Responsive media query for smaller screens */
+        @media (max-width: 768px) {
+            .quiz-meta {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Quiz Title -->
+        <h1>JavaScript Basics Quiz</h1>
+
+        <!-- Quiz Meta Information -->
+        <div class="quiz-meta">
+            <div><strong>Difficulty:</strong> Medium</div>
+            <div><strong>Duration:</strong> 30 minutes</div>
+            <div><strong>Attempts Allowed:</strong> 3</div>
+            <div><strong>Score:</strong> 85/100</div>
+        </div>
+
+        <!-- Questions Section -->
+        <div class="questions">
+            <h2>Questions:</h2>
+
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>1. What is the correct syntax for referring to an external script called "app.js"?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="1"> <label>&lt;script src="app.js"&gt;</label></li>
+                    <li><input type="radio" name="q1" value="2"> <label>&lt;script href="app.js"&gt;</label></li>
+                    <li><input type="radio" name="q1" value="3"> <label>&lt;script ref="app.js"&gt;</label></li>
+                </ul>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. How do you write "Hello World" in an alert box?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="1"> <label>alertBox("Hello World");</label></li>
+                    <li><input type="radio" name="q2" value="2"> <label>msg("Hello World");</label></li>
+                    <li><input type="radio" name="q2" value="3"> <label>alert("Hello World");</label></li>
+                </ul>
+            </div>
+            
+            <!-- Add more questions here -->
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="feedback">
+            <h2>Feedback:</h2>
+            <p>Great job! You have a solid understanding of JavaScript basics. Review the syntax for linking external scripts and alerting messages for better scores in future attempts.</p>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review">
+            <h2>Review:</h2>
+            <p><strong>Question 1:</strong> The correct syntax for referring to an external script is <code>&lt;script src="app.js"&gt;</code>.</p>
+            <p><strong>Question 2:</strong> Use <code>alert("Hello World");</code> to display "Hello World" in an alert box.</p>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Quiz</button>
+    </div>
+
+    <div class="footer">
+        © 2024 Quiz Platform. All Rights Reserved.
+    </div>
+</body>
+</html>

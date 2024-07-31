@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        /* Global styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Styling for the form container */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling for the header */
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for all input elements */
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Styles for text areas */
+        textarea {
+            resize: vertical;
+        }
+
+        /* Styles for submit and reset buttons */
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 49%;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        /* Hover effect for buttons */
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for labels */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        /* Styling for the footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Assignment </h1>
+        <form>
+            <!-- Assignment Title -->
+            <label for="title">Assignment Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter assignment title" required>
+
+            <!-- Assignment Description -->
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Enter assignment description" required></textarea>
+
+            <!-- Assignment Deadlines -->
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline" required>
+
+            <!-- Grading Criteria -->
+            <label for="grading">Grading Criteria:</label>
+            <textarea id="grading" name="grading" rows="4" placeholder="Enter grading criteria" required></textarea>
+
+            <!-- Feedback -->
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Enter feedback"></textarea>
+
+            <!-- Assignment Status -->
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="">Select status</option>
+                <option value="submitted">Submitted</option>
+                <option value="not submitted">Not Submitted</option>
+                <option value="under review">Under Review</option>
+                <option value="graded">Graded</option>
+            </select>
+
+            <!-- File Attachments -->
+            <label for="attachments">File Attachments:</label>
+            <input type="file" id="attachments" name="attachments" multiple>
+
+            <!-- Peer Review -->
+            <label for="peer-review">Peer Review:</label>
+            <textarea id="peer-review" name="peer-review" rows="4" placeholder="Enter peer review comments"></textarea>
+
+            <!-- Rewards -->
+            <label for="rewards">Rewards:</label>
+            <input type="text" id="rewards" name="rewards" placeholder="Enter rewards">
+
+            <!-- Submit and Reset Buttons -->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+    <div class="footer">
+        © 2024 Your Institution. All Rights Reserved.
+    </div>
+</body>
+
+</html>

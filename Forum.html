@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Page</title>
+    <style>
+        /* Global styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Styling for the main container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling for header */
+        h1,
+        h2,
+        h3 {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for section header */
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        /* Styling for forum meta details */
+        .forum-meta {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for forum content sections */
+        .forum-content {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for individual topics */
+        .topics {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for each topic header */
+        .topic-header {
+            margin-bottom: 5px;
+            color: #007bff;
+        }
+
+        /* Styling for thread and post lists */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Styling for each thread */
+        .threads li {
+            margin-bottom: 10px;
+        }
+
+        /* Styling for recent activity and announcements */
+        .activity, .announcements {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for activity updates */
+        .activity p {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Styling for subscriber and rule sections */
+        .subscribers, .rules {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for moderation and tags */
+        .moderators, .tags {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for links */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Hover effect for links */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        /* Responsive media query for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Forum Title -->
+        <h1>Web Development Forum</h1>
+
+        <!-- Forum Meta Information -->
+        <div class="forum-meta">
+            <strong>Moderators:</strong> John Doe, Jane Smith
+        </div>
+
+        <!-- Topics Section -->
+        <div class="topics">
+            <h2>Topics:</h2>
+
+            <!-- Topic 1 -->
+            <div class="forum-content">
+                <h3 class="topic-header">1. HTML & CSS</h3>
+                <ul class="threads">
+                    <li>
+                        <strong>Thread:</strong> Best Practices for CSS Layouts<br>
+                        <strong>Posts:</strong> 12 Replies<br>
+                        <strong>Date:</strong> July 22, 2024
+                    </li>
+                    <li>
+                        <strong>Thread:</strong> Understanding Flexbox<br>
+                        <strong>Posts:</strong> 8 Replies<br>
+                        <strong>Date:</strong> July 21, 2024
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Topic 2 -->
+            <div class="forum-content">
+                <h3 class="topic-header">2. JavaScript</h3>
+                <ul class="threads">
+                    <li>
+                        <strong>Thread:</strong> Asynchronous JavaScript Explained<br>
+                        <strong>Posts:</strong> 15 Replies<br>
+                        <strong>Date:</strong> July 20, 2024
+                    </li>
+                    <li>
+                        <strong>Thread:</strong> JavaScript ES6 Features<br>
+                        <strong>Posts:</strong> 20 Replies<br>
+                        <strong>Date:</strong> July 18, 2024
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Add more topics and threads here -->
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="activity">
+            <h2>Recent Activity:</h2>
+            <p>New thread in JavaScript: "How to use Promises and Async/Await" - 5 hours ago</p>
+        </div>
+
+        <!-- Subscribers Section -->
+        <div class="subscribers">
+            <h2>Subscribers:</h2>
+            <p>Join the community! <strong>1234</strong> members have subscribed to updates.</p>
+        </div>
+
+        <!-- Rules Section -->
+        <div class="rules">
+            <h2>Forum Rules:</h2>
+            <p>1. Be respectful to others.</p>
+            <p>2. No spamming or advertisements.</p>
+            <p>3. Stay on topic.</p>
+            <!-- Add more rules here -->
+        </div>
+
+        <!-- Announcements Section -->
+        <div class="announcements">
+            <h2>Announcements:</h2>
+            <p><strong>July 24, 2024:</strong> Welcome our new moderator, Jane Smith!</p>
+            <!-- Add more announcements here -->
+        </div>
+
+        <!-- Tags Section -->
+        <div class="tags">
+            <h2>Tags:</h2>
+            <p>#HTML #CSS #JavaScript #WebDevelopment #Coding</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2024 E Learning Forum. All Rights Reserved.
+    </div>
+</body>
+
+</html>

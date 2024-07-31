@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Page</title>
+    <style>
+        /* Global styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Styling for the main container */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling for header */
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for lesson details */
+        .lesson-details {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for lesson order and duration */
+        .lesson-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for individual lesson order and duration items */
+        .lesson-meta div {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        /* Styling for video section */
+        .video-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for iframe video */
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Styling for video links list */
+        .video-links {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for unordered list of video links */
+        .video-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Styling for individual video link items */
+        .video-links ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Styling for resource list */
+        .resources {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for resource list items */
+        .resources ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Styling for individual resource items */
+        .resources ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Styling for links */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Hover effect for links */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling for lesson status */
+        .status {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for comments section */
+        .comments {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for comments textarea */
+        .comments textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        /* Styling for submit button */
+        .comments button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        /* Hover effect for submit button */
+        .comments button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for related courses section */
+        .related-courses {
+            margin-top: 20px;
+        }
+
+        /* Styling for related course list */
+        .related-courses ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Styling for individual related course items */
+        .related-courses ul li {
+            margin: 10px;
+            flex: 1 1 calc(33.333% - 20px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        /* Styling for related course link */
+        .related-courses ul li a {
+            display: block;
+            padding: 10px;
+            color: #333333;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        /* Responsive media query for smaller screens */
+        @media (max-width: 768px) {
+            .lesson-meta {
+                flex-direction: column;
+            }
+
+            .related-courses ul li {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Lesson Title -->
+        <h1>Introduction to Web Development</h1>
+
+        <!-- Lesson Order and Duration -->
+        <div class="lesson-meta">
+            <div>
+                <strong>Order:</strong> Lesson 1
+            </div>
+            <div>
+                <strong>Duration:</strong> 45 minutes
+            </div>
+        </div>
+
+        <!-- Lesson Content -->
+        <div class="lesson-details">
+            <h2>Content:</h2>
+            <p>This lesson provides an introduction to web development, covering the basics of HTML, CSS, and JavaScript. You will learn how to create simple web pages and understand the structure of web applications.</p>
+        </div>
+
+        <!-- Lesson Video -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/1Rs2ND1ryYc" allowfullscreen></iframe>
+        </div>
+
+        <!-- Video Links -->
+        <div class="video-links">
+            <h2>Additional Video Links:</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=3JluqTojuME" target="_blank">HTML Basics</a></li>
+                <li><a href="https://www.youtube.com/watch?v=1PnVor36_40" target="_blank">CSS Crash Course</a></li>
+                <li><a href="https://www.youtube.com/watch?v=W6NZfCO5SIk" target="_blank">JavaScript Fundamentals</a></li>
+            </ul>
+        </div>
+
+        <!-- Lesson Resources -->
+        <div class="resources">
+            <h2>Resources:</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS Documentation</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript Documentation</a></li>
+            </ul>
+        </div>
+
+        <!-- Lesson Status -->
+        <div class="status">
+            <h2>Status:</h2>
+            <p>In Progress</p>
+        </div>
+
+        <!-- Lesson Comments -->
+        <div class="comments">
+            <h2>Comments:</h2>
+            <textarea rows="4" placeholder="Leave your comments here..."></textarea>
+            <button type="button">Submit Comment</button>
+        </div>
+
+        <!-- Related Courses -->
+        <div class="related-courses">
+            <h2>Related Courses:</h2>
+            <ul>
+                <li><a href="#">Advanced HTML & CSS</a></li>
+                <li><a href="#">JavaScript for Beginners</a></li>
+                <li><a href="#">Responsive Web Design</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2024 E Learning. All Rights Reserved.
+    </div>
+</body>
+
+</html>
+
+
