@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header styles */
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Notification item styles */
+        .notification {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        /* Last notification item styles */
+        .notification:last-child {
+            border-bottom: none;
+        }
+
+        /* Styles for notification content */
+        .notification-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Details of the notification */
+        .details {
+            max-width: 600px;
+        }
+
+        /* Notification type */
+        .type {
+            font-weight: bold;
+        }
+
+        /* Action button styles */
+        .action {
+            margin-left: 10px;
+        }
+
+        /* Action button styles */
+        .action-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Action button hover effect */
+        .action-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Mark as read/unread button styles */
+        .status-btn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Mark as read/unread button hover effect */
+        .status-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Date and status styles */
+        .date-status {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Settings button styles */
+        .settings {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        /* Settings button styles */
+        .settings-btn {
+            background-color: #ffc107;
+            color: #333;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Settings button hover effect */
+        .settings-btn:hover {
+            background-color: #e0a800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Title -->
+        <h1>Notifications</h1>
+
+        <!-- Notification item -->
+        <div class="notification">
+            <div class="notification-content">
+                <div class="details">
+                    <span class="type">Course Update</span>
+                    <p>New material has been added to your Web Development course.</p>
+                    <div class="date-status">
+                        <span>Date: 2024-07-28</span> | <span>Status: Unread</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a href="course.html" class="action-btn">View Course</a>
+                    <button class="status-btn" onclick="markAsRead(this)">Mark as Read</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification item -->
+        <div class="notification">
+            <div class="notification-content">
+                <div class="details">
+                    <span class="type">Forum Reply</span>
+                    <p>Someone replied to your post in the 'JavaScript Basics' forum.</p>
+                    <div class="date-status">
+                        <span>Date: 2024-07-27</span> | <span>Status: Read</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a href="Forum.html" class="action-btn">View Reply</a>
+                    <button class="status-btn" onclick="markAsUnread(this)">Mark as Unread</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification item -->
+        <div class="notification">
+            <div class="notification-content">
+                <div class="details">
+                    <span class="type">New Assignment</span>
+                    <p>A new assignment has been posted in the 'Data Structures' course.</p>
+                    <div class="date-status">
+                        <span>Date: 2024-07-26</span> | <span>Status: Unread</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a href="Assignment.html" class="action-btn">View Assignment</a>
+                    <button class="status-btn" onclick="markAsRead(this)">Mark as Read</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification settings button -->
+        <div class="settings">
+            <button class="settings-btn">Notification Settings</button>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

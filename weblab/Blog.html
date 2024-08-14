@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <style>
+        /* Global styles for body */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Styling for the main container */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling for header */
+        h1,
+        h2,
+        h3 {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for author and date */
+        .meta-info {
+            color: #777777;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for featured image */
+        .featured-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for content section */
+        .content {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for tags */
+        .tags {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for individual tags */
+        .tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            text-decoration: none;
+        }
+
+        /* Hover effect for tags */
+        .tag:hover {
+            background-color: #d1e7fd;
+        }
+
+        /* Styling for comments section */
+        .comments {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for individual comments */
+        .comment {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Styling for likes and shares */
+        .likes-shares {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for likes and shares items */
+        .likes-shares-item {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            width: 45%;
+        }
+
+        /* Styling for related courses */
+        .related-courses {
+            margin-bottom: 20px;
+        }
+
+        /* Styling for related courses list */
+        .related-courses ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Styling for each related course */
+        .related-courses li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        /* Responsive media query for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            /* Responsive styling for likes and shares */
+            .likes-shares {
+                flex-direction: column;
+            }
+
+            .likes-shares-item {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Blog Title -->
+        <h1>Understanding Modern Web Development</h1>
+
+        <!-- Author and Date -->
+        <div class="meta-info">
+            <strong>Author:</strong> John Doe | <strong>Date:</strong> July 24, 2024
+        </div>
+
+        <!-- Featured Image -->
+        <img src="C:\Users\91918\OneDrive\Desktop\web stack\images\—Pngtree—e learning icons_6555186.png" alt="Featured Image" class="featured-image">
+
+        <!-- Content Section -->
+        <div class="content">
+            <p>Web development has evolved significantly over the past few years. With the advent of new technologies and frameworks, developers now have more tools than ever to create dynamic and responsive websites...</p>
+            <!-- Add more paragraphs/content here -->
+        </div>
+
+        <!-- Tags Section -->
+        <div class="tags">
+            <strong>Tags:</strong>
+            <a href="#" class="tag">#WebDevelopment</a>
+            <a href="#" class="tag">#JavaScript</a>
+            <a href="#" class="tag">#HTML</a>
+            <!-- Add more tags here -->
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments">
+            <h2>Comments:</h2>
+            <div class="comment">
+                <strong>Jane Smith:</strong>
+                <p>This article is very informative. I learned a lot about modern web development practices. Thanks for sharing!</p>
+            </div>
+            <div class="comment">
+                <strong>Mike Johnson:</strong>
+                <p>Great insights! I am looking forward to applying these concepts in my projects.</p>
+            </div>
+            <!-- Add more comments here -->
+        </div>
+
+        <!-- Likes and Shares -->
+        <div class="likes-shares">
+            <div class="likes-shares-item">
+                <strong>Likes:</strong> 256
+            </div>
+            <div class="likes-shares-item">
+                <strong>Shares:</strong> 112
+            </div>
+        </div>
+
+        <!-- Related Courses Section -->
+        <div class="related-courses">
+            <h2>Related Courses:</h2>
+            <ul>
+                <li><a href="#" class="tag">Complete Guide to HTML & CSS</a></li>
+                <li><a href="#" class="tag">JavaScript Essentials for Beginners</a></li>
+                <li><a href="#" class="tag">Responsive Web Design with Flexbox</a></li>
+                <!-- Add more related courses here -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2024 E learning Blog. All Rights Reserved.
+    </div>
+</body>
+
+</html>

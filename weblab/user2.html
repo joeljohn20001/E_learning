@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Input field styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        /* Button Hover Effect */
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Profile Page Styles */
+        .profile {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: none;
+        }
+
+        /* Profile Picture Styles */
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff;
+            margin-bottom: 20px;
+        }
+
+        /* Profile Information List */
+        .user-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Individual Information Item */
+        .user-info li {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Registration Form -->
+    <div class="container" id="registrationForm">
+        <div class="header">
+            <h1>User Registration</h1>
+        </div>
+        <form id="userForm" onsubmit="registerUser(event)">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+             
+   
+            <legend>Select Your Gender:</legend>
+
+            <label>
+                <input type="checkbox" name="gender" value="male"> Male
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="gender" value="female"> Female
+            </label><br>
+
+            <br>
+            <legend>Select Your Favorite Educational Subject:</legend>
+
+            <label>
+                <input type="radio" name="subject" value="Commerce"> Commerce
+            </label><br>
+
+            <label>
+                <input type="radio" name="subject" value="science"> Science
+            </label><br>
+
+            <label>
+                <input type="radio" name="subject" value="Others">Others 
+            </label><br>
+            <br>
+            <br>
+
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <label for="subscriptionStatus">Subscription Status:</label>
+            <select id="subscriptionStatus" name="subscriptionStatus">
+                <option value="free">Free</option>
+                <option value="premium">Premium</option>
+            </select>
+
+            <label for="coursesEnrolled">Courses Enrolled:</label>
+            <input type="number" id="coursesEnrolled" name="coursesEnrolled" min="0" required>
+
+            <button type="submit" class="btn">Register</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </form>
+    </div>
+
+    <!-- User Profile Page -->
+    <div class="profile" id="userProfile">
+        <div class="header">
+            <h1>User Profile</h1>
+        </div>
+        <div class="header">
+            <img id="displayProfilePicture" class="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
+            <h2 id="displayFullName"></h2>
+        </div>
+        <ul class="user-info">
+            <li><strong>First Name:</strong> <span id="displayFirstName"></span></li>
+            <li><strong>Last Name:</strong> <span id="displayLastName"></span></li>
+            <li><strong>Email:</strong> <span id="displayEmail"></span></li>
+            <li><strong>Date of Birth:</strong> <span id="displayDob"></span></li>
+            <li><strong>Country:</strong> <span id="displayCountry"></span></li>
+            <li><strong>Role:</strong> <span id="displayRole"></span></li>
+            <li><strong>Subscription Status:</strong> <span id="displaySubscriptionStatus"></span></li>
+            <li><strong>Courses Enrolled:</strong> <span id="displayCoursesEnrolled"></span></li>
+        </ul>
+        <div class="buttons">
+            <button class="btn" onclick="editProfile()">Edit Profile</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>

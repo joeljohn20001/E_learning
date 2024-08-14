@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - LearnFusion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            background-image: url('learn1.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: rgba(240, 237, 237, 0.7);
+        }
+
+        .navbar-brand, .nav-link {
+            color: rgba(22, 3, 3, 0.7) !important;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .main-content article {
+            flex: 1 1 300px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.91);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-content article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: 2px solid #0056b3;
+        }
+
+        button:hover {
+            background-color: #7c7d7e;
+            color: #fff;
+        }
+
+        .hero {
+            background: url('learn.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+        }
+
+        .team-container {
+            background: rgba(90, 28, 28, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: rgba(203, 188, 188, 0.925);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .location {
+            background: rgba(255, 254, 254, 0.982);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-qr {
+            background-color: #69819a90;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-qr:hover {
+            background-color: #6e7f93;
+        }
+
+        .card {
+            margin-bottom: 20px; /* Ensure there is space below cards */
+            background-color: #abbfd6;
+        }
+
+        /* Modal iframe style */
+        .modal-content {
+            height: 80vh; /* Adjust the height of the modal */
+            width: 80vw; /* Adjust the width of the modal */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">About LearnFusion</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero text-center">
+            <div class="container">
+                <h1>LearnFusion</h1>
+                <p>Welcome to LearnFusion, where education meets excellence.</p>
+            </div>
+        </section>
+
+        <section class="location text-center my-5">
+            <h2>Our Location</h2>
+            <p>Find us at:</p>
+            <p>Address: LearnFusion Headquarters: 654 Edu Tower, Jayanagar, Bangalore, Karnataka 560041, India</p>
+            <a href="https://www.google.com/maps/place/12%C2%B051'31.8%22N+77%C2%B036'03.7%22E/@12.8588482,77.5984511,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.858843!4d77.601026?entry=ttu" class="btn-qr" target="_blank">View on Google Maps</a>
+            <br><br>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn-qr" data-toggle="modal" data-target="#mapModal">
+                Open Street Map
+            </button>
+        </section>
+
+        <div id="map"></div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mapModalLabel">Open Street Map</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="demo.html" title="Demo Home"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="main-content">
+            <article>
+                <h2>Interactive Courses</h2>
+                <img src="https://cdn.elearningindustry.com/wp-content/uploads/2021/07/Create-Interactive-eLearning-Content-In-3-Steps.png" class="card-img-top" alt="Interactive Courses">
+                <p>Dive into a diverse range of interactive courses designed to engage and challenge you. From tech to humanities, our courses are crafted by industry experts and include multimedia content, quizzes, and hands-on projects. Experience education that adapts to your learning style and pace.</p>
+            </article>
+            <article>
+                <h2>Live Webinars and Workshops</h2>
+                <img src="https://www.thinkorion.com/wp-content/uploads/2022/09/webinar..jpg" class="card-img-top" alt="Live Webinars and Workshops">
+                <p>Participate in live webinars and workshops led by professionals and thought leaders. Gain real-time insights, ask questions, and collaborate with peers. These sessions provide valuable opportunities for networking and in-depth learning on current trends and skills.</p>
+            </article>
+            <article>
+                <h2>Personalized Learning Paths</h2>
+                <img src="https://www.thepltoolbox.com/uploads/3/9/3/9/39393589/pl-logo-fullstacked-05_orig.png" class="card-img-top" alt="Personalized Learning Paths">
+                <p>Tailor your educational journey with personalized learning paths that align with your goals and interests. Our intelligent recommendation system suggests courses and resources based on your progress and preferences, ensuring a customized and efficient learning experience.</p>
+            </article>
+            <article>
+                <h2><b>Our History</b></h2>
+                <p>LearnFusion began with a vision to transform traditional education into a dynamic, accessible, and interactive experience. Founded in 2020, it emerged from a desire to bridge the gap between conventional learning methods and the demands of the modern digital world. Our journey started with a small team of educators and tech innovators passionate about revolutionizing the way knowledge is delivered and consumed. Initially focused on providing high-quality online courses, LearnFusion quickly gained recognition for its user-centric approach and cutting-edge technology. By 2021, we introduced interactive features that enhanced engagement, including multimedia content and real-time feedback. Our commitment to personalized learning paths allowed students to tailor their educational experiences, leading to significant improvements in learning outcomes. As the platform grew, we expanded our offerings to include live webinars and workshops, connecting learners with industry experts and thought leaders. This move fostered a collaborative learning environment, enabling students to gain insights from professionals and network with peers. In 2023, LearnFusion launched its community support features, creating vibrant forums and study groups where users could share knowledge and seek guidance. This development solidified our position as a comprehensive learning solution, integrating education with community support. Today, LearnFusion continues to innovate, incorporating the latest advancements in technology and pedagogy to provide an unparalleled learning experience. Our mission remains steadfast: to empower learners around the globe with the tools and knowledge they need to succeed in an ever-evolving world.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LearnFusion. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Initialize the main map
+        var map = L.map('map').setView([12.9279, 77.6271], 13); // Default location
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19
+        }).addTo(map);
+        L.marker([12.9279, 77.6271]).addTo(map)
+            .bindPopup('LearnFusion Headquarters')
+            .openPopup();
+    </script>
+</body>
+</html>

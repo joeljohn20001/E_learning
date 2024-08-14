@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .error {
+            color: red;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Geolocation Information</h1>
+    </header>
+    <main>
+        <section id="location-info">
+            <h2>Find Location</h2>
+            <div class="input-group">
+                <label for="latitude">Latitude:</label>
+                <input type="text" id="latitude" placeholder="Enter latitude" />
+            </div>
+            <div class="input-group">
+                <label for="longitude">Longitude:</label>
+                <input type="text" id="longitude" placeholder="Enter longitude" />
+            </div>
+            <button id="find-location">Find Location</button>
+            <h2>Location Details</h2>
+            <p id="address">Enter coordinates and click 'Find Location' to get details.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 LearnFusion</p>
+    </footer>
+
+    <script>
+        document.getElementById('find-location').addEventListener('click', () => {
+            const lat = document.getElementById('latitude').value;
+            const lng = document.getElementById('longitude').value;
+            
+            if (!lat || !lng) {
+                document.getElementById('address').textContent = 'Please enter both latitude and longitude.';
+                document.getElementById('address').classList.add('error');
+                return;
+            }
+            
+            const url = https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json&addressdetails=1;
+            
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+                    const address = data.display_name;
+                    document.getElementById('address').textContent = address;
+                    document.getElementById('address').classList.remove('error');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('address').textContent = 'Unable to fetch address. Please check your coordinates.';
+                    document.getElementById('address').classList.add('error');
+                });
+        });
+    </script>
+</body>
+</html>

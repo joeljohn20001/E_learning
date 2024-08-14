@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* Global styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://cdn.elearningindustry.com/wp-content/uploads/2023/06/Shutterstock_1772271383.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Styling for the form container */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling for the header */
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for all input elements */
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="password"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Styles for text areas */
+        textarea {
+            resize: vertical;
+        }
+
+        /* Styles for submit and reset buttons */
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 49%;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        /* Hover effect for buttons */
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for labels */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        /* Styling for the footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Feedback Form</h1>
+    </header>
+
+    <main>
+        <section class="container">
+            <form>
+                <!-- Feedback Title -->
+                <label for="title">Feedback Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter feedback title" required>
+
+                <!-- Feedback Description -->
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Enter feedback description" required></textarea>
+
+                <!-- Feedback Date -->
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <!-- Feedback Category -->
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">Select category</option>
+                    <option value="service">Service</option>
+                    <option value="product">Product</option>
+                    <option value="support">Support</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <!-- Rating -->
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select rating</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+
+                <!-- Additional Comments -->
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional comments"></textarea>
+
+                <!-- Submit and Reset Buttons -->
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        © 2024 Your Institution. All Rights Reserved.
+    </footer>
+</body>
+
+</html>
